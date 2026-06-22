@@ -5,19 +5,32 @@
 /*                                                    +:+ +:+         +:+     */
 /*   By: codespace <codespace@student.42.fr>        +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2026/01/12 22:15:33 by codespace         #+#    #+#             */
-/*   Updated: 2026/04/11 15:30:51 by codespace        ###   ########.fr       */
+/*   Created: 2026/06/20 15:19:17 by mel-assa          #+#    #+#             */
+/*   Updated: 2026/06/22 17:24:32 by codespace        ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#ifndef GET_NEXT_LINE
-# define GET_NEXT_LINE
+#ifndef GET_NEXT_LINE_H
+# define GET_NEXT_LINE_H
 
+# include <limits.h>
 # include <stdlib.h>
+# include <unistd.h>
+
+# ifndef BUFFER_SIZE
+#  define BUFFER_SIZE 42
+# endif
 
 char	*get_next_line(int fd);
+char	*read_and_concatenate(int fd, char *leftover);
+char	*extract_line(char *leftover);
+char	*update_leftover(char *leftover);
+char	*join_and_free(char *leftover, char *buffer);
+char	*init_leftover(char *leftover);
 void	*ft_calloc(size_t count, size_t size);
-void	ft_bzero(void *s, size_t n);
 char	*ft_strchr(const char *str, int c);
+size_t	ft_strlen(const char *stn);
+char	*ft_strjoin(const char *str1, const char *str2);
+char	*init_leftover(char *leftover);
 
 #endif

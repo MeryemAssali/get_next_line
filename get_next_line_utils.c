@@ -5,8 +5,8 @@
 /*                                                    +:+ +:+         +:+     */
 /*   By: codespace <codespace@student.42.fr>        +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2026/04/11 13:07:42 by codespace         #+#    #+#             */
-/*   Updated: 2026/06/22 04:46:05 by codespace        ###   ########.fr       */
+/*   Created: 2026/06/20 16:12:35 by mel-assa          #+#    #+#             */
+/*   Updated: 2026/06/22 17:24:20 by codespace        ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -30,17 +30,6 @@ void	*ft_calloc(size_t count, size_t size)
 	return ((void *)ptr);
 }
 
-void	ft_bzero(void *s, size_t n)
-{
-	size_t	i;
-	char	*ptr;
-
-	ptr = s;
-	i = 0;
-	while (i < n)
-		ptr[i++] = '\0';
-}
-
 char	*ft_strchr(const char *str, int c)
 {
 	size_t	i;
@@ -55,6 +44,16 @@ char	*ft_strchr(const char *str, int c)
 	if ((unsigned char)str[i] == (unsigned char)c)
 		return ((char *)&str[i]);
 	return (NULL);
+}
+
+size_t	ft_strlen(const char *stn)
+{
+	size_t	i;
+
+	i = 0;
+	while (stn[i])
+		i++;
+	return (i);
 }
 
 char	*ft_strjoin(const char *str1, const char *str2)
@@ -82,4 +81,15 @@ char	*ft_strjoin(const char *str1, const char *str2)
 	}
 	stn[i + j] = '\0';
 	return (stn);
+}
+
+char	*init_leftover(char *leftover)
+{
+	if (!leftover)
+	{
+		leftover = ft_calloc(1, sizeof(char));
+		if (!leftover)
+			return (NULL);
+	}
+	return (leftover);
 }
