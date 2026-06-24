@@ -240,4 +240,4 @@ Specifically, it was used to:
 * Assist with debugging and interpreting compiler errors
 * Improve understanding of memory management and buffer handling
 
-All code was ultimately written, tested, and integrated by the project author.
+All code was ultimately written, tested, and integrated by me.
