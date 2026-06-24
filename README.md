@@ -222,8 +222,6 @@ The implementation must behave correctly regardless of the chosen value.
 ## References
 
 * 42 get_next_line subject
-* Linux `read(2)` manual page
-* Linux file descriptor documentation
 * Discussions with 42 peers
 * GitHub repositories used for general reference and comparison
 
