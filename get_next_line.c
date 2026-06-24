@@ -6,7 +6,7 @@
 /*   By: codespace <codespace@student.42.fr>        +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/06/20 15:17:00 by mel-assa          #+#    #+#             */
-/*   Updated: 2026/06/22 17:23:59 by codespace        ###   ########.fr       */
+/*   Updated: 2026/06/24 06:08:47 by codespace        ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -52,8 +52,7 @@ char	*update_leftover(char *leftover)
 	i++;
 	stash = malloc(ft_strlen(leftover) - i + 1);
 	if (!stash)
-		free(leftover);
-	return (NULL);
+		return (free(leftover), NULL);
 	j = 0;
 	while (leftover[i])
 		stash[j++] = leftover[i++];
